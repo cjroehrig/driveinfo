@@ -2044,8 +2044,8 @@ Report Options - these produce a report of the drives:
 Generate Operations - these instead produce an output file for the drives:
     -I        Query <drive> on its host, generate a merged INFO.txt to stdout.
               Use -f to override existing INFO.txt fields with new live info.
-    -P        Query <drive> on its host, generate PARTITIONS.txt to stdout.
-    -S        Query <drive> on its host, add a line to STATS.txt.
+    -P        Generate PARTITIONS.txt to stdout.
+	-S        Add a line to STATS.txt from the current Stats Source (see below).
     -x        Do a smartctl -x query for <drive> on its host to stdout.
               In WRITE mode, write to a datestamped .smartx file.
     -D        DIFF mode: diff vs existing files rather than generate to stdout.
@@ -2061,7 +2061,7 @@ Filter Options (more than one can apply)
     -O <os>   Only process drives attached to a <os> host (os=LNX|WIN|MAC).
 
 Stats Source Options; mutually exclusive:
-    -X        Do a smartctl -x query for <drive>, saved to .smartx, STATS.txt.
+    -X        Do a smartctl -x query for <drive>, saved to datestamped .smartx.
     -K        Do a smartctl -x query for <drive>, discard the .smartx.
     -J        Read the most recent .smartx file.
     -Q        Read the most recent (last) line in STATS.txt (the default).
